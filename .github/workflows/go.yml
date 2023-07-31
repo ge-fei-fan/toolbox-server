@@ -61,6 +61,9 @@ jobs:
         goos: [windows]
         
     steps:
+    - name: Set CGO_ENABLED environment variable
+      run: echo "CGO_ENABLED=1" >> $GITHUB_ENV
+
     - uses: actions/checkout@v3
     # 安装Go环境
     - name: Set up Go
