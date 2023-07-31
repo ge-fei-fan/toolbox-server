@@ -89,6 +89,7 @@ jobs:
     # Go build exe 命令
     - name: Build exe
       run: |
+         go env -w CGO_ENABLED=1
          go mod tidy
          go build -tags release
       env:
