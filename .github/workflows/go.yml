@@ -70,7 +70,10 @@ jobs:
     # 获取当前tag的版本
     - name: Get version
       id: get_version
+#      run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
       run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
+      shell: bash
+
       
     # 从该tag打上一个release标签(这里会output一些参数 后面才能使用)
     - name: Create Release
