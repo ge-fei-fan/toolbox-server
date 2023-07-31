@@ -56,7 +56,7 @@ jobs:
     # 声明策略，可以遍历在多环境、不同系统内循环构建 交叉编译
     strategy:
       matrix:
-        os: [ubuntu-latest]
+        os: [windows-latest]
         goarch: [amd64]
         goos: [windows]
         
