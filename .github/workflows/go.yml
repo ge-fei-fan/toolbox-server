@@ -3,14 +3,14 @@
 
 name: Go
 
-# on:
-#   push:
-#     branches: [ "master" ]
-#   pull_request:
-#     branches: [ "master" ]
 on:
-  release:
-    types: [created]
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+# on:
+#   release:
+#     types: [created]
 jobs:
   build-and-tag:
     runs-on: windows-latest  
