@@ -26,15 +26,15 @@ jobs:
         go mod tidy
         go build -tags release
 
-    - name: Create Tag
-      run: |
-        echo ::set-env name=TAG::v1.0.${{ github.run_number }}
-        echo $TAG >> $GITHUB_ENV
+#     - name: Create Tag
+#       run: |
+#         echo ::set-env name=TAG::v1.0.${{ github.run_number }}
+#         echo $TAG >> $GITHUB_ENV
 
-    - name: Push Tag
-      if: success()
-      run: |
-        git config --local user.email "754277710@qq.com"
-        git config --local user.name "GitHub Action"
-        git tag $TAG
-        git push origin $TAG
+#     - name: Push Tag
+#       if: success()
+#       run: |
+#         git config --local user.email "754277710@qq.com"
+#         git config --local user.name "GitHub Action"
+#         git tag $TAG
+#         git push origin $TAG
